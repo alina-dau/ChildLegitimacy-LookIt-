@@ -25,7 +25,7 @@ https://github.com/alina-dau/ChildLegitimacy-LookIt-/blob/master/mp4/GIRLS_CompL
 ### Girls_IncompFraud: 
 https://github.com/alina-dau/ChildLegitimacy-LookIt-/blob/master/mp4/GIRLS_IncompFraud.mp4
 
-### Girls_IncompFraud: 
+### Girls_IncompLegit: 
 https://github.com/alina-dau/ChildLegitimacy-LookIt-/blob/master/mp4/GIRLS_IncompLegit.mp4
 
 
