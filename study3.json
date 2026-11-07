@@ -167,7 +167,7 @@
                 {
                     "kind": "exp-lookit-images-audio",
                     "id": "girl-confirm",
-                    "audio": "Alright, you’re a girl",
+                    "audio": "Alright_youre_a_girl",
                     "images": [
                         {
                             "id": "child",
@@ -1128,7 +1128,7 @@
                 {
                     "kind": "exp-lookit-images-audio",
                     "id": "boy-confirm",
-                    "audio": "Alright, you’re a boy",
+                    "audio": "Alright_youre_a_boy",
                     "images": [
                         {
                             "id": "child",
