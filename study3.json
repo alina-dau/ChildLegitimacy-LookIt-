@@ -832,7 +832,7 @@
                     "images": [
                         {
                             "id": "scene",
-                            "src": "girl_q_lunch.png",
+                            "src": "GIRL-Q-LUNCH",
                             "position": "fill",
                             "nonChoiceOption": true
                         },
@@ -842,7 +842,7 @@
                             "left": 5.27,
                             "top": 30.49,
                             "width": 25.6,
-                            "height": 43.57
+                            "height": 57.42
                         },
                         {
                             "id": "riley",
@@ -850,7 +850,7 @@
                             "left": 67.46,
                             "top": 30.49,
                             "width": 26.91,
-                            "height": 43.57
+                            "height": 57.42
                         }
                     ],
                     "highlights": [
@@ -879,7 +879,7 @@
                     "images": [
                         {
                             "id": "scene",
-                            "src": "girl_q_math.png",
+                            "src": "GIRL-Q-MATH",
                             "position": "fill",
                             "nonChoiceOption": true
                         },
@@ -889,7 +889,7 @@
                             "left": 62.72,
                             "top": 12.9,
                             "width": 13.26,
-                            "height": 42.29
+                            "height": 57.51
                         },
                         {
                             "id": "riley",
@@ -897,7 +897,7 @@
                             "left": 77.3,
                             "top": 12.9,
                             "width": 14.41,
-                            "height": 42.29
+                            "height": 57.51
                         }
                     ],
                     "highlights": [
@@ -1793,7 +1793,7 @@
                     "images": [
                         {
                             "id": "scene",
-                            "src": "q_lunch.png",
+                            "src": "BOY-Q-LUNCH",
                             "position": "fill",
                             "nonChoiceOption": true
                         },
@@ -1803,7 +1803,7 @@
                             "left": 6.1,
                             "top": 30.04,
                             "width": 25.34,
-                            "height": 45.03
+                            "height": 65.63
                         },
                         {
                             "id": "riley",
@@ -1811,7 +1811,7 @@
                             "left": 68.5,
                             "top": 30.04,
                             "width": 25.55,
-                            "height": 45.03
+                            "height": 65.63
                         }
                     ],
                     "highlights": [
@@ -1840,7 +1840,7 @@
                     "images": [
                         {
                             "id": "scene",
-                            "src": "q_math.png",
+                            "src": "BOY-Q-MATH",
                             "position": "fill",
                             "nonChoiceOption": true
                         },
@@ -1850,7 +1850,7 @@
                             "left": 66.1,
                             "top": 14.45,
                             "width": 12.64,
-                            "height": 45.03
+                            "height": 65.63
                         },
                         {
                             "id": "riley",
@@ -1858,7 +1858,7 @@
                             "left": 80.58,
                             "top": 14.45,
                             "width": 13.26,
-                            "height": 45.03
+                            "height": 65.63
                         }
                     ],
                     "highlights": [
@@ -2094,6 +2094,8 @@
                     "BOY-Q-LIKE": "q_like.png",
                     "BOY-MC-END": "mc_end.png",
                     "BOY-Q-TOY": "q_toy.png",
+                    "BOY-Q-LUNCH": "q_lunch_ballots.png",
+                    "BOY-Q-MATH": "q_math_ballots.png",
                     "BOY-S15-LEFT": "s15_election_left.png",
                     "BOY-S15-RIGHT": "s15_election_right.png",
                     "GIRL-MC-VOTES": "girl_mc_votes.png",
@@ -2101,6 +2103,8 @@
                     "GIRL-Q-LIKE": "girl_q_like.png",
                     "GIRL-MC-END": "girl_mc_end.png",
                     "GIRL-Q-TOY": "girl_q_toy.png",
+                    "GIRL-Q-LUNCH": "girl_q_lunch_ballots.png",
+                    "GIRL-Q-MATH": "girl_q_math_ballots.png",
                     "GIRL-S15-LEFT": "girl_s15_election_left.png",
                     "GIRL-S15-RIGHT": "girl_s15_election_right.png",
                     "AUDIO-RESULTS": "Results_12",
@@ -2156,6 +2160,8 @@
                     "BOY-Q-LIKE": "q_like_rev.png",
                     "BOY-MC-END": "mc_end_rev.png",
                     "BOY-Q-TOY": "q_toy_rev.png",
+                    "BOY-Q-LUNCH": "q_lunch_ballots_rev.png",
+                    "BOY-Q-MATH": "q_math_ballots_rev.png",
                     "BOY-S15-LEFT": "s15_election_rev_left.png",
                     "BOY-S15-RIGHT": "s15_election_rev_right.png",
                     "GIRL-MC-VOTES": "girl_mc_votes_rev.png",
@@ -2163,6 +2169,8 @@
                     "GIRL-Q-LIKE": "girl_q_like_rev.png",
                     "GIRL-MC-END": "girl_mc_end_rev.png",
                     "GIRL-Q-TOY": "girl_q_toy_rev.png",
+                    "GIRL-Q-LUNCH": "girl_q_lunch_ballots_rev.png",
+                    "GIRL-Q-MATH": "girl_q_math_ballots_rev.png",
                     "GIRL-S15-LEFT": "girl_s15_election_rev_left.png",
                     "GIRL-S15-RIGHT": "girl_s15_election_rev_right.png",
                     "AUDIO-RESULTS": "Results_12_rev",
