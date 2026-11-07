@@ -133,15 +133,13 @@
                             "id": "boy",
                             "src": "jamie.png",
                             "nonChoiceOption": false,
-                            "position": "left",
-                            "feedbackAudio": "Alright, you’re a boy"
+                            "position": "left"
                         },
                         {
                             "id": "girl",
                             "src": "riley.png",
                             "nonChoiceOption": false,
-                            "position": "right",
-                            "feedbackAudio": "Alright, you’re a girl"
+                            "position": "right"
                         }
                     ],
                     "highlights": [
@@ -164,7 +162,20 @@
                     "doRecording": true,
                     "choiceRequired": true,
                     "canMakeChoiceBeforeAudioFinished": false,
-                    "selectNextFrame": "function(frames, frameIndex, frameData, expData, sequence, child, pastSessions) { if (frameData.selectedImage == 'girl') { return frameIndex + 1;} else if (frameData.selectedImage == 'boy') { return frameIndex + 26;} }"
+                    "selectNextFrame": "function(frames, frameIndex, frameData, expData, sequence, child, pastSessions) { if (frameData.selectedImage == 'girl') { return frameIndex + 1;} else if (frameData.selectedImage == 'boy') { return frameIndex + 33;} }"
+                },
+                {
+                    "kind": "exp-lookit-images-audio",
+                    "id": "girl-confirm",
+                    "audio": "Alright, you’re a girl",
+                    "images": [
+                        {
+                            "id": "child",
+                            "src": "riley.png",
+                            "position": "center",
+                            "nonChoiceOption": true
+                        }
+                    ]
                 },
                 {
                     "kind": "exp-lookit-images-audio",
@@ -273,7 +284,7 @@
                 {
                     "kind": "exp-lookit-images-audio",
                     "id": "girl-mc-rule",
-                    "audio": "Voting_memory_check_7_full",
+                    "audio": "Rule_check_full",
                     "images": [
                         {
                             "id": "scene",
@@ -299,28 +310,131 @@
                             "width": 15.76,
                             "height": 41.93,
                             "correct": false,
-                            "feedbackAudio": "Voting_rules_correction"
+                            "feedbackAudio": "silence_short"
                         }
                     ],
                     "highlights": [
                         {
                             "range": [
-                                9.4,
-                                19.8
+                                9.41,
+                                18.94
                             ],
                             "imageId": "votes"
                         },
                         {
                             "range": [
-                                20.4,
-                                23.6
+                                20.59,
+                                23.61
                             ],
                             "imageId": "teacher"
                         }
                     ],
                     "choiceRequired": true,
                     "canMakeChoiceBeforeAudioFinished": false,
-                    "correctChoiceRequired": true
+                    "selectNextFrame": "function(frames, frameIndex, frameData, expData, sequence, child, pastSessions) { if (frameData.correctImageSelected) { return frameIndex + 3; } return frameIndex + 1; }"
+                },
+                {
+                    "kind": "exp-lookit-images-audio",
+                    "id": "girl-mc-rule-correction-1",
+                    "audio": "Rule_correction_full",
+                    "images": [
+                        {
+                            "id": "scene",
+                            "src": "mc_rule.png",
+                            "position": "fill",
+                            "nonChoiceOption": true
+                        },
+                        {
+                            "id": "votes",
+                            "src": "clickzone.png",
+                            "left": 28.45,
+                            "top": 5.52,
+                            "width": 40.92,
+                            "height": 33.27,
+                            "correct": true,
+                            "feedbackAudio": "Correct_rules_feedback"
+                        },
+                        {
+                            "id": "teacher",
+                            "src": "clickzone.png",
+                            "left": 42.46,
+                            "top": 42.8,
+                            "width": 15.76,
+                            "height": 41.93,
+                            "correct": false,
+                            "feedbackAudio": "silence_short"
+                        }
+                    ],
+                    "highlights": [
+                        {
+                            "range": [
+                                25.78,
+                                35.3
+                            ],
+                            "imageId": "votes"
+                        },
+                        {
+                            "range": [
+                                36.96,
+                                39.97
+                            ],
+                            "imageId": "teacher"
+                        }
+                    ],
+                    "choiceRequired": true,
+                    "canMakeChoiceBeforeAudioFinished": false,
+                    "selectNextFrame": "function(frames, frameIndex, frameData, expData, sequence, child, pastSessions) { if (frameData.correctImageSelected) { return frameIndex + 2; } return frameIndex + 1; }"
+                },
+                {
+                    "kind": "exp-lookit-images-audio",
+                    "id": "girl-mc-rule-correction-2",
+                    "audio": "Rule_correction_full",
+                    "images": [
+                        {
+                            "id": "scene",
+                            "src": "mc_rule.png",
+                            "position": "fill",
+                            "nonChoiceOption": true
+                        },
+                        {
+                            "id": "votes",
+                            "src": "clickzone.png",
+                            "left": 28.45,
+                            "top": 5.52,
+                            "width": 40.92,
+                            "height": 33.27,
+                            "correct": true,
+                            "feedbackAudio": "Correct_rules_feedback"
+                        },
+                        {
+                            "id": "teacher",
+                            "src": "clickzone.png",
+                            "left": 42.46,
+                            "top": 42.8,
+                            "width": 15.76,
+                            "height": 41.93,
+                            "correct": false,
+                            "feedbackAudio": "silence_short"
+                        }
+                    ],
+                    "highlights": [
+                        {
+                            "range": [
+                                25.78,
+                                35.3
+                            ],
+                            "imageId": "votes"
+                        },
+                        {
+                            "range": [
+                                36.96,
+                                39.97
+                            ],
+                            "imageId": "teacher"
+                        }
+                    ],
+                    "choiceRequired": true,
+                    "canMakeChoiceBeforeAudioFinished": false
                 },
                 {
                     "kind": "exp-lookit-images-audio",
@@ -380,17 +494,31 @@
                     "audio": "AUDIO-RESULTS",
                     "images": [
                         {
-                            "id": "scene",
-                            "src": "GIRL-S15-ELECTION",
-                            "position": "fill",
-                            "nonChoiceOption": true
+                            "id": "left",
+                            "src": "GIRL-S15-LEFT",
+                            "left": 0,
+                            "top": 0,
+                            "width": 50,
+                            "height": 100,
+                            "nonChoiceOption": true,
+                            "displayDelayMs": "S15-LEFT-DELAY"
+                        },
+                        {
+                            "id": "right",
+                            "src": "GIRL-S15-RIGHT",
+                            "left": 50,
+                            "top": 0,
+                            "width": 50,
+                            "height": 100,
+                            "nonChoiceOption": true,
+                            "displayDelayMs": "S15-RIGHT-DELAY"
                         }
                     ]
                 },
                 {
                     "kind": "exp-lookit-images-audio",
                     "id": "girl-mc-votes",
-                    "audio": "Winner_memory_check_12_full",
+                    "audio": "Most_votes_check_full",
                     "images": [
                         {
                             "id": "scene",
@@ -405,8 +533,8 @@
                             "top": 19.83,
                             "width": 14.82,
                             "height": 69.64,
-                            "correct": "MOST-VOTES-JAMIE-CORRECT",
-                            "feedbackAudio": "MOST-VOTES-JAMIE-FEEDBACK"
+                            "correct": "MOST-JAMIE-CORRECT",
+                            "feedbackAudio": "MOST-JAMIE-FEEDBACK"
                         },
                         {
                             "id": "riley",
@@ -415,18 +543,107 @@
                             "top": 19.83,
                             "width": 16.02,
                             "height": 69.64,
-                            "correct": "MOST-VOTES-RILEY-CORRECT",
-                            "feedbackAudio": "MOST-VOTES-RILEY-FEEDBACK"
+                            "correct": "MOST-RILEY-CORRECT",
+                            "feedbackAudio": "MOST-RILEY-FEEDBACK"
+                        }
+                    ],
+                    "highlights": [
+                        {
+                            "range": [
+                                8.67,
+                                9.42
+                            ],
+                            "imageId": "jamie"
+                        },
+                        {
+                            "range": [
+                                9.47,
+                                10.78
+                            ],
+                            "imageId": "riley"
                         }
                     ],
                     "choiceRequired": true,
                     "canMakeChoiceBeforeAudioFinished": false,
-                    "correctChoiceRequired": true
+                    "selectNextFrame": "function(frames, frameIndex, frameData, expData, sequence, child, pastSessions) { if (frameData.correctImageSelected) { return frameIndex + 3; } return frameIndex + 1; }"
+                },
+                {
+                    "kind": "exp-lookit-images-audio",
+                    "id": "girl-mc-votes-correction-1",
+                    "audio": "AUDIO-MOST-FIX",
+                    "images": [
+                        {
+                            "id": "scene",
+                            "src": "GIRL-MC-VOTES",
+                            "position": "fill",
+                            "nonChoiceOption": true
+                        },
+                        {
+                            "id": "jamie",
+                            "src": "clickzone.png",
+                            "left": 24.8,
+                            "top": 19.83,
+                            "width": 14.82,
+                            "height": 69.64,
+                            "correct": "MOST-JAMIE-CORRECT",
+                            "feedbackAudio": "MOST-JAMIE-FEEDBACK"
+                        },
+                        {
+                            "id": "riley",
+                            "src": "clickzone.png",
+                            "left": 62.82,
+                            "top": 19.83,
+                            "width": 16.02,
+                            "height": 69.64,
+                            "correct": "MOST-RILEY-CORRECT",
+                            "feedbackAudio": "MOST-RILEY-FEEDBACK"
+                        }
+                    ],
+                    "highlights": "HL-MOST-FIX",
+                    "choiceRequired": true,
+                    "canMakeChoiceBeforeAudioFinished": false,
+                    "selectNextFrame": "function(frames, frameIndex, frameData, expData, sequence, child, pastSessions) { if (frameData.correctImageSelected) { return frameIndex + 2; } return frameIndex + 1; }"
+                },
+                {
+                    "kind": "exp-lookit-images-audio",
+                    "id": "girl-mc-votes-correction-2",
+                    "audio": "AUDIO-MOST-FIX",
+                    "images": [
+                        {
+                            "id": "scene",
+                            "src": "GIRL-MC-VOTES",
+                            "position": "fill",
+                            "nonChoiceOption": true
+                        },
+                        {
+                            "id": "jamie",
+                            "src": "clickzone.png",
+                            "left": 24.8,
+                            "top": 19.83,
+                            "width": 14.82,
+                            "height": 69.64,
+                            "correct": "MOST-JAMIE-CORRECT",
+                            "feedbackAudio": "MOST-JAMIE-FEEDBACK"
+                        },
+                        {
+                            "id": "riley",
+                            "src": "clickzone.png",
+                            "left": 62.82,
+                            "top": 19.83,
+                            "width": 16.02,
+                            "height": 69.64,
+                            "correct": "MOST-RILEY-CORRECT",
+                            "feedbackAudio": "MOST-RILEY-FEEDBACK"
+                        }
+                    ],
+                    "highlights": "HL-MOST-FIX",
+                    "choiceRequired": true,
+                    "canMakeChoiceBeforeAudioFinished": false
                 },
                 {
                     "kind": "exp-lookit-images-audio",
                     "id": "girl-mc-cheat",
-                    "audio": "Winner_memory_check_cheater_12_2_full",
+                    "audio": "Extra_votes_check_full",
                     "images": [
                         {
                             "id": "scene",
@@ -441,8 +658,8 @@
                             "top": 19.83,
                             "width": 14.82,
                             "height": 69.64,
-                            "correct": "EXTRA-VOTES-JAMIE-CORRECT",
-                            "feedbackAudio": "EXTRA-VOTES-JAMIE-FEEDBACK"
+                            "correct": "EXTRA-JAMIE-CORRECT",
+                            "feedbackAudio": "EXTRA-JAMIE-FEEDBACK"
                         },
                         {
                             "id": "riley",
@@ -451,13 +668,102 @@
                             "top": 19.83,
                             "width": 16.02,
                             "height": 69.64,
-                            "correct": "EXTRA-VOTES-RILEY-CORRECT",
-                            "feedbackAudio": "EXTRA-VOTES-RILEY-FEEDBACK"
+                            "correct": "EXTRA-RILEY-CORRECT",
+                            "feedbackAudio": "EXTRA-RILEY-FEEDBACK"
+                        }
+                    ],
+                    "highlights": [
+                        {
+                            "range": [
+                                6.13,
+                                6.88
+                            ],
+                            "imageId": "jamie"
+                        },
+                        {
+                            "range": [
+                                6.93,
+                                8.24
+                            ],
+                            "imageId": "riley"
                         }
                     ],
                     "choiceRequired": true,
                     "canMakeChoiceBeforeAudioFinished": false,
-                    "correctChoiceRequired": true
+                    "selectNextFrame": "function(frames, frameIndex, frameData, expData, sequence, child, pastSessions) { if (frameData.correctImageSelected) { return frameIndex + 3; } return frameIndex + 1; }"
+                },
+                {
+                    "kind": "exp-lookit-images-audio",
+                    "id": "girl-mc-cheat-correction-1",
+                    "audio": "AUDIO-EXTRA-FIX",
+                    "images": [
+                        {
+                            "id": "scene",
+                            "src": "GIRL-MC-VOTES",
+                            "position": "fill",
+                            "nonChoiceOption": true
+                        },
+                        {
+                            "id": "jamie",
+                            "src": "clickzone.png",
+                            "left": 24.8,
+                            "top": 19.83,
+                            "width": 14.82,
+                            "height": 69.64,
+                            "correct": "EXTRA-JAMIE-CORRECT",
+                            "feedbackAudio": "EXTRA-JAMIE-FEEDBACK"
+                        },
+                        {
+                            "id": "riley",
+                            "src": "clickzone.png",
+                            "left": 62.82,
+                            "top": 19.83,
+                            "width": 16.02,
+                            "height": 69.64,
+                            "correct": "EXTRA-RILEY-CORRECT",
+                            "feedbackAudio": "EXTRA-RILEY-FEEDBACK"
+                        }
+                    ],
+                    "highlights": "HL-EXTRA-FIX",
+                    "choiceRequired": true,
+                    "canMakeChoiceBeforeAudioFinished": false,
+                    "selectNextFrame": "function(frames, frameIndex, frameData, expData, sequence, child, pastSessions) { if (frameData.correctImageSelected) { return frameIndex + 2; } return frameIndex + 1; }"
+                },
+                {
+                    "kind": "exp-lookit-images-audio",
+                    "id": "girl-mc-cheat-correction-2",
+                    "audio": "AUDIO-EXTRA-FIX",
+                    "images": [
+                        {
+                            "id": "scene",
+                            "src": "GIRL-MC-VOTES",
+                            "position": "fill",
+                            "nonChoiceOption": true
+                        },
+                        {
+                            "id": "jamie",
+                            "src": "clickzone.png",
+                            "left": 24.8,
+                            "top": 19.83,
+                            "width": 14.82,
+                            "height": 69.64,
+                            "correct": "EXTRA-JAMIE-CORRECT",
+                            "feedbackAudio": "EXTRA-JAMIE-FEEDBACK"
+                        },
+                        {
+                            "id": "riley",
+                            "src": "clickzone.png",
+                            "left": 62.82,
+                            "top": 19.83,
+                            "width": 16.02,
+                            "height": 69.64,
+                            "correct": "EXTRA-RILEY-CORRECT",
+                            "feedbackAudio": "EXTRA-RILEY-FEEDBACK"
+                        }
+                    ],
+                    "highlights": "HL-EXTRA-FIX",
+                    "choiceRequired": true,
+                    "canMakeChoiceBeforeAudioFinished": false
                 },
                 {
                     "kind": "exp-lookit-images-audio",
@@ -710,7 +1016,7 @@
                 {
                     "kind": "exp-lookit-images-audio",
                     "id": "girl-mc-end-votes",
-                    "audio": "Winner_memory_check_12_full",
+                    "audio": "Most_votes_check_full",
                     "images": [
                         {
                             "id": "scene",
@@ -725,7 +1031,7 @@
                             "top": 19.83,
                             "width": 14.82,
                             "height": 69.64,
-                            "correct": "MOST-VOTES-JAMIE-CORRECT"
+                            "correct": "MOST-JAMIE-CORRECT"
                         },
                         {
                             "id": "riley",
@@ -734,7 +1040,23 @@
                             "top": 19.83,
                             "width": 16.02,
                             "height": 69.64,
-                            "correct": "MOST-VOTES-RILEY-CORRECT"
+                            "correct": "MOST-RILEY-CORRECT"
+                        }
+                    ],
+                    "highlights": [
+                        {
+                            "range": [
+                                8.67,
+                                9.42
+                            ],
+                            "imageId": "jamie"
+                        },
+                        {
+                            "range": [
+                                9.47,
+                                10.78
+                            ],
+                            "imageId": "riley"
                         }
                     ],
                     "choiceRequired": true,
@@ -743,7 +1065,7 @@
                 {
                     "kind": "exp-lookit-images-audio",
                     "id": "girl-mc-end-cheat",
-                    "audio": "Winner_memory_check_cheater_12_2_full",
+                    "audio": "Extra_votes_check_full",
                     "images": [
                         {
                             "id": "scene",
@@ -758,7 +1080,7 @@
                             "top": 19.83,
                             "width": 14.82,
                             "height": 69.64,
-                            "correct": "EXTRA-VOTES-JAMIE-CORRECT"
+                            "correct": "EXTRA-JAMIE-CORRECT"
                         },
                         {
                             "id": "riley",
@@ -767,7 +1089,23 @@
                             "top": 19.83,
                             "width": 16.02,
                             "height": 69.64,
-                            "correct": "EXTRA-VOTES-RILEY-CORRECT"
+                            "correct": "EXTRA-RILEY-CORRECT"
+                        }
+                    ],
+                    "highlights": [
+                        {
+                            "range": [
+                                6.13,
+                                6.88
+                            ],
+                            "imageId": "jamie"
+                        },
+                        {
+                            "range": [
+                                6.93,
+                                8.24
+                            ],
+                            "imageId": "riley"
                         }
                     ],
                     "choiceRequired": true,
@@ -785,8 +1123,20 @@
                             "nonChoiceOption": true
                         }
                     ],
-                    "showPreviousButton": false,
-                    "selectNextFrame": "function(frames, frameIndex, frameData, expData, sequence, child, pastSessions) { return frameIndex + 26; }"
+                    "selectNextFrame": "function(frames, frameIndex, frameData, expData, sequence, child, pastSessions) { return frameIndex + 33; }"
+                },
+                {
+                    "kind": "exp-lookit-images-audio",
+                    "id": "boy-confirm",
+                    "audio": "Alright, you’re a boy",
+                    "images": [
+                        {
+                            "id": "child",
+                            "src": "jamie.png",
+                            "position": "center",
+                            "nonChoiceOption": true
+                        }
+                    ]
                 },
                 {
                     "kind": "exp-lookit-images-audio",
@@ -895,7 +1245,7 @@
                 {
                     "kind": "exp-lookit-images-audio",
                     "id": "boy-mc-rule",
-                    "audio": "Voting_memory_check_7_full",
+                    "audio": "Rule_check_full",
                     "images": [
                         {
                             "id": "scene",
@@ -921,28 +1271,131 @@
                             "width": 15.76,
                             "height": 41.93,
                             "correct": false,
-                            "feedbackAudio": "Voting_rules_correction"
+                            "feedbackAudio": "silence_short"
                         }
                     ],
                     "highlights": [
                         {
                             "range": [
-                                9.4,
-                                19.8
+                                9.41,
+                                18.94
                             ],
                             "imageId": "votes"
                         },
                         {
                             "range": [
-                                20.4,
-                                23.6
+                                20.59,
+                                23.61
                             ],
                             "imageId": "teacher"
                         }
                     ],
                     "choiceRequired": true,
                     "canMakeChoiceBeforeAudioFinished": false,
-                    "correctChoiceRequired": true
+                    "selectNextFrame": "function(frames, frameIndex, frameData, expData, sequence, child, pastSessions) { if (frameData.correctImageSelected) { return frameIndex + 3; } return frameIndex + 1; }"
+                },
+                {
+                    "kind": "exp-lookit-images-audio",
+                    "id": "boy-mc-rule-correction-1",
+                    "audio": "Rule_correction_full",
+                    "images": [
+                        {
+                            "id": "scene",
+                            "src": "mc_rule.png",
+                            "position": "fill",
+                            "nonChoiceOption": true
+                        },
+                        {
+                            "id": "votes",
+                            "src": "clickzone.png",
+                            "left": 28.45,
+                            "top": 5.52,
+                            "width": 40.92,
+                            "height": 33.27,
+                            "correct": true,
+                            "feedbackAudio": "Correct_rules_feedback"
+                        },
+                        {
+                            "id": "teacher",
+                            "src": "clickzone.png",
+                            "left": 42.46,
+                            "top": 42.8,
+                            "width": 15.76,
+                            "height": 41.93,
+                            "correct": false,
+                            "feedbackAudio": "silence_short"
+                        }
+                    ],
+                    "highlights": [
+                        {
+                            "range": [
+                                25.78,
+                                35.3
+                            ],
+                            "imageId": "votes"
+                        },
+                        {
+                            "range": [
+                                36.96,
+                                39.97
+                            ],
+                            "imageId": "teacher"
+                        }
+                    ],
+                    "choiceRequired": true,
+                    "canMakeChoiceBeforeAudioFinished": false,
+                    "selectNextFrame": "function(frames, frameIndex, frameData, expData, sequence, child, pastSessions) { if (frameData.correctImageSelected) { return frameIndex + 2; } return frameIndex + 1; }"
+                },
+                {
+                    "kind": "exp-lookit-images-audio",
+                    "id": "boy-mc-rule-correction-2",
+                    "audio": "Rule_correction_full",
+                    "images": [
+                        {
+                            "id": "scene",
+                            "src": "mc_rule.png",
+                            "position": "fill",
+                            "nonChoiceOption": true
+                        },
+                        {
+                            "id": "votes",
+                            "src": "clickzone.png",
+                            "left": 28.45,
+                            "top": 5.52,
+                            "width": 40.92,
+                            "height": 33.27,
+                            "correct": true,
+                            "feedbackAudio": "Correct_rules_feedback"
+                        },
+                        {
+                            "id": "teacher",
+                            "src": "clickzone.png",
+                            "left": 42.46,
+                            "top": 42.8,
+                            "width": 15.76,
+                            "height": 41.93,
+                            "correct": false,
+                            "feedbackAudio": "silence_short"
+                        }
+                    ],
+                    "highlights": [
+                        {
+                            "range": [
+                                25.78,
+                                35.3
+                            ],
+                            "imageId": "votes"
+                        },
+                        {
+                            "range": [
+                                36.96,
+                                39.97
+                            ],
+                            "imageId": "teacher"
+                        }
+                    ],
+                    "choiceRequired": true,
+                    "canMakeChoiceBeforeAudioFinished": false
                 },
                 {
                     "kind": "exp-lookit-images-audio",
@@ -1002,17 +1455,31 @@
                     "audio": "AUDIO-RESULTS",
                     "images": [
                         {
-                            "id": "scene",
-                            "src": "BOY-S15-ELECTION",
-                            "position": "fill",
-                            "nonChoiceOption": true
+                            "id": "left",
+                            "src": "BOY-S15-LEFT",
+                            "left": 0,
+                            "top": 0,
+                            "width": 50,
+                            "height": 100,
+                            "nonChoiceOption": true,
+                            "displayDelayMs": "S15-LEFT-DELAY"
+                        },
+                        {
+                            "id": "right",
+                            "src": "BOY-S15-RIGHT",
+                            "left": 50,
+                            "top": 0,
+                            "width": 50,
+                            "height": 100,
+                            "nonChoiceOption": true,
+                            "displayDelayMs": "S15-RIGHT-DELAY"
                         }
                     ]
                 },
                 {
                     "kind": "exp-lookit-images-audio",
                     "id": "boy-mc-votes",
-                    "audio": "Winner_memory_check_12_full",
+                    "audio": "Most_votes_check_full",
                     "images": [
                         {
                             "id": "scene",
@@ -1027,8 +1494,8 @@
                             "top": 11.54,
                             "width": 18.57,
                             "height": 80.76,
-                            "correct": "MOST-VOTES-JAMIE-CORRECT",
-                            "feedbackAudio": "MOST-VOTES-JAMIE-FEEDBACK"
+                            "correct": "MOST-JAMIE-CORRECT",
+                            "feedbackAudio": "MOST-JAMIE-FEEDBACK"
                         },
                         {
                             "id": "riley",
@@ -1037,18 +1504,107 @@
                             "top": 11.54,
                             "width": 19.41,
                             "height": 80.76,
-                            "correct": "MOST-VOTES-RILEY-CORRECT",
-                            "feedbackAudio": "MOST-VOTES-RILEY-FEEDBACK"
+                            "correct": "MOST-RILEY-CORRECT",
+                            "feedbackAudio": "MOST-RILEY-FEEDBACK"
+                        }
+                    ],
+                    "highlights": [
+                        {
+                            "range": [
+                                8.67,
+                                9.42
+                            ],
+                            "imageId": "jamie"
+                        },
+                        {
+                            "range": [
+                                9.47,
+                                10.78
+                            ],
+                            "imageId": "riley"
                         }
                     ],
                     "choiceRequired": true,
                     "canMakeChoiceBeforeAudioFinished": false,
-                    "correctChoiceRequired": true
+                    "selectNextFrame": "function(frames, frameIndex, frameData, expData, sequence, child, pastSessions) { if (frameData.correctImageSelected) { return frameIndex + 3; } return frameIndex + 1; }"
+                },
+                {
+                    "kind": "exp-lookit-images-audio",
+                    "id": "boy-mc-votes-correction-1",
+                    "audio": "AUDIO-MOST-FIX",
+                    "images": [
+                        {
+                            "id": "scene",
+                            "src": "BOY-MC-VOTES",
+                            "position": "fill",
+                            "nonChoiceOption": true
+                        },
+                        {
+                            "id": "jamie",
+                            "src": "clickzone.png",
+                            "left": 23.24,
+                            "top": 11.54,
+                            "width": 18.57,
+                            "height": 80.76,
+                            "correct": "MOST-JAMIE-CORRECT",
+                            "feedbackAudio": "MOST-JAMIE-FEEDBACK"
+                        },
+                        {
+                            "id": "riley",
+                            "src": "clickzone.png",
+                            "left": 61.68,
+                            "top": 11.54,
+                            "width": 19.41,
+                            "height": 80.76,
+                            "correct": "MOST-RILEY-CORRECT",
+                            "feedbackAudio": "MOST-RILEY-FEEDBACK"
+                        }
+                    ],
+                    "highlights": "HL-MOST-FIX",
+                    "choiceRequired": true,
+                    "canMakeChoiceBeforeAudioFinished": false,
+                    "selectNextFrame": "function(frames, frameIndex, frameData, expData, sequence, child, pastSessions) { if (frameData.correctImageSelected) { return frameIndex + 2; } return frameIndex + 1; }"
+                },
+                {
+                    "kind": "exp-lookit-images-audio",
+                    "id": "boy-mc-votes-correction-2",
+                    "audio": "AUDIO-MOST-FIX",
+                    "images": [
+                        {
+                            "id": "scene",
+                            "src": "BOY-MC-VOTES",
+                            "position": "fill",
+                            "nonChoiceOption": true
+                        },
+                        {
+                            "id": "jamie",
+                            "src": "clickzone.png",
+                            "left": 23.24,
+                            "top": 11.54,
+                            "width": 18.57,
+                            "height": 80.76,
+                            "correct": "MOST-JAMIE-CORRECT",
+                            "feedbackAudio": "MOST-JAMIE-FEEDBACK"
+                        },
+                        {
+                            "id": "riley",
+                            "src": "clickzone.png",
+                            "left": 61.68,
+                            "top": 11.54,
+                            "width": 19.41,
+                            "height": 80.76,
+                            "correct": "MOST-RILEY-CORRECT",
+                            "feedbackAudio": "MOST-RILEY-FEEDBACK"
+                        }
+                    ],
+                    "highlights": "HL-MOST-FIX",
+                    "choiceRequired": true,
+                    "canMakeChoiceBeforeAudioFinished": false
                 },
                 {
                     "kind": "exp-lookit-images-audio",
                     "id": "boy-mc-cheat",
-                    "audio": "Winner_memory_check_cheater_12_2_full",
+                    "audio": "Extra_votes_check_full",
                     "images": [
                         {
                             "id": "scene",
@@ -1063,8 +1619,8 @@
                             "top": 11.54,
                             "width": 18.57,
                             "height": 80.76,
-                            "correct": "EXTRA-VOTES-JAMIE-CORRECT",
-                            "feedbackAudio": "EXTRA-VOTES-JAMIE-FEEDBACK"
+                            "correct": "EXTRA-JAMIE-CORRECT",
+                            "feedbackAudio": "EXTRA-JAMIE-FEEDBACK"
                         },
                         {
                             "id": "riley",
@@ -1073,13 +1629,102 @@
                             "top": 11.54,
                             "width": 19.41,
                             "height": 80.76,
-                            "correct": "EXTRA-VOTES-RILEY-CORRECT",
-                            "feedbackAudio": "EXTRA-VOTES-RILEY-FEEDBACK"
+                            "correct": "EXTRA-RILEY-CORRECT",
+                            "feedbackAudio": "EXTRA-RILEY-FEEDBACK"
+                        }
+                    ],
+                    "highlights": [
+                        {
+                            "range": [
+                                6.13,
+                                6.88
+                            ],
+                            "imageId": "jamie"
+                        },
+                        {
+                            "range": [
+                                6.93,
+                                8.24
+                            ],
+                            "imageId": "riley"
                         }
                     ],
                     "choiceRequired": true,
                     "canMakeChoiceBeforeAudioFinished": false,
-                    "correctChoiceRequired": true
+                    "selectNextFrame": "function(frames, frameIndex, frameData, expData, sequence, child, pastSessions) { if (frameData.correctImageSelected) { return frameIndex + 3; } return frameIndex + 1; }"
+                },
+                {
+                    "kind": "exp-lookit-images-audio",
+                    "id": "boy-mc-cheat-correction-1",
+                    "audio": "AUDIO-EXTRA-FIX",
+                    "images": [
+                        {
+                            "id": "scene",
+                            "src": "BOY-MC-VOTES",
+                            "position": "fill",
+                            "nonChoiceOption": true
+                        },
+                        {
+                            "id": "jamie",
+                            "src": "clickzone.png",
+                            "left": 23.24,
+                            "top": 11.54,
+                            "width": 18.57,
+                            "height": 80.76,
+                            "correct": "EXTRA-JAMIE-CORRECT",
+                            "feedbackAudio": "EXTRA-JAMIE-FEEDBACK"
+                        },
+                        {
+                            "id": "riley",
+                            "src": "clickzone.png",
+                            "left": 61.68,
+                            "top": 11.54,
+                            "width": 19.41,
+                            "height": 80.76,
+                            "correct": "EXTRA-RILEY-CORRECT",
+                            "feedbackAudio": "EXTRA-RILEY-FEEDBACK"
+                        }
+                    ],
+                    "highlights": "HL-EXTRA-FIX",
+                    "choiceRequired": true,
+                    "canMakeChoiceBeforeAudioFinished": false,
+                    "selectNextFrame": "function(frames, frameIndex, frameData, expData, sequence, child, pastSessions) { if (frameData.correctImageSelected) { return frameIndex + 2; } return frameIndex + 1; }"
+                },
+                {
+                    "kind": "exp-lookit-images-audio",
+                    "id": "boy-mc-cheat-correction-2",
+                    "audio": "AUDIO-EXTRA-FIX",
+                    "images": [
+                        {
+                            "id": "scene",
+                            "src": "BOY-MC-VOTES",
+                            "position": "fill",
+                            "nonChoiceOption": true
+                        },
+                        {
+                            "id": "jamie",
+                            "src": "clickzone.png",
+                            "left": 23.24,
+                            "top": 11.54,
+                            "width": 18.57,
+                            "height": 80.76,
+                            "correct": "EXTRA-JAMIE-CORRECT",
+                            "feedbackAudio": "EXTRA-JAMIE-FEEDBACK"
+                        },
+                        {
+                            "id": "riley",
+                            "src": "clickzone.png",
+                            "left": 61.68,
+                            "top": 11.54,
+                            "width": 19.41,
+                            "height": 80.76,
+                            "correct": "EXTRA-RILEY-CORRECT",
+                            "feedbackAudio": "EXTRA-RILEY-FEEDBACK"
+                        }
+                    ],
+                    "highlights": "HL-EXTRA-FIX",
+                    "choiceRequired": true,
+                    "canMakeChoiceBeforeAudioFinished": false
                 },
                 {
                     "kind": "exp-lookit-images-audio",
@@ -1332,7 +1977,7 @@
                 {
                     "kind": "exp-lookit-images-audio",
                     "id": "boy-mc-end-votes",
-                    "audio": "Winner_memory_check_12_full",
+                    "audio": "Most_votes_check_full",
                     "images": [
                         {
                             "id": "scene",
@@ -1347,7 +1992,7 @@
                             "top": 11.54,
                             "width": 18.57,
                             "height": 80.76,
-                            "correct": "MOST-VOTES-JAMIE-CORRECT"
+                            "correct": "MOST-JAMIE-CORRECT"
                         },
                         {
                             "id": "riley",
@@ -1356,7 +2001,23 @@
                             "top": 11.54,
                             "width": 19.41,
                             "height": 80.76,
-                            "correct": "MOST-VOTES-RILEY-CORRECT"
+                            "correct": "MOST-RILEY-CORRECT"
+                        }
+                    ],
+                    "highlights": [
+                        {
+                            "range": [
+                                8.67,
+                                9.42
+                            ],
+                            "imageId": "jamie"
+                        },
+                        {
+                            "range": [
+                                9.47,
+                                10.78
+                            ],
+                            "imageId": "riley"
                         }
                     ],
                     "choiceRequired": true,
@@ -1365,7 +2026,7 @@
                 {
                     "kind": "exp-lookit-images-audio",
                     "id": "boy-mc-end-cheat",
-                    "audio": "Winner_memory_check_cheater_12_2_full",
+                    "audio": "Extra_votes_check_full",
                     "images": [
                         {
                             "id": "scene",
@@ -1380,7 +2041,7 @@
                             "top": 11.54,
                             "width": 18.57,
                             "height": 80.76,
-                            "correct": "EXTRA-VOTES-JAMIE-CORRECT"
+                            "correct": "EXTRA-JAMIE-CORRECT"
                         },
                         {
                             "id": "riley",
@@ -1389,7 +2050,23 @@
                             "top": 11.54,
                             "width": 19.41,
                             "height": 80.76,
-                            "correct": "EXTRA-VOTES-RILEY-CORRECT"
+                            "correct": "EXTRA-RILEY-CORRECT"
+                        }
+                    ],
+                    "highlights": [
+                        {
+                            "range": [
+                                6.13,
+                                6.88
+                            ],
+                            "imageId": "jamie"
+                        },
+                        {
+                            "range": [
+                                6.93,
+                                8.24
+                            ],
+                            "imageId": "riley"
                         }
                     ],
                     "choiceRequired": true,
@@ -1406,58 +2083,133 @@
                             "position": "fill",
                             "nonChoiceOption": true
                         }
-                    ],
-                    "showPreviousButton": false
+                    ]
                 }
             ],
             "parameterSets": [
                 {
                     "VERSION": "jamie-fair",
-                    "BOY-S15-ELECTION": "s15_election.png",
                     "BOY-MC-VOTES": "mc_votes.png",
                     "BOY-Q-PRESIDENT": "q_president.png",
                     "BOY-Q-LIKE": "q_like.png",
                     "BOY-MC-END": "mc_end.png",
                     "BOY-Q-TOY": "q_toy.png",
-                    "GIRL-S15-ELECTION": "girl_s15_election.png",
+                    "BOY-S15-LEFT": "s15_election_left.png",
+                    "BOY-S15-RIGHT": "s15_election_right.png",
                     "GIRL-MC-VOTES": "girl_mc_votes.png",
                     "GIRL-Q-PRESIDENT": "girl_q_president.png",
                     "GIRL-Q-LIKE": "girl_q_like.png",
                     "GIRL-MC-END": "girl_mc_end.png",
                     "GIRL-Q-TOY": "girl_q_toy.png",
+                    "GIRL-S15-LEFT": "girl_s15_election_left.png",
+                    "GIRL-S15-RIGHT": "girl_s15_election_right.png",
                     "AUDIO-RESULTS": "Results_12",
-                    "MOST-VOTES-JAMIE-CORRECT": true,
-                    "MOST-VOTES-RILEY-CORRECT": false,
-                    "EXTRA-VOTES-JAMIE-CORRECT": false,
-                    "EXTRA-VOTES-RILEY-CORRECT": true,
-                    "MOST-VOTES-JAMIE-FEEDBACK": "Correct_answer_feedback",
-                    "MOST-VOTES-RILEY-FEEDBACK": "Jamie_memory_correction",
-                    "EXTRA-VOTES-JAMIE-FEEDBACK": "Riley_memory_correction",
-                    "EXTRA-VOTES-RILEY-FEEDBACK": "Correct_answer_feedback"
+                    "S15-LEFT-DELAY": 0,
+                    "S15-RIGHT-DELAY": 15400,
+                    "MOST-JAMIE-CORRECT": true,
+                    "MOST-JAMIE-FEEDBACK": "Correct_answer_feedback",
+                    "MOST-RILEY-CORRECT": false,
+                    "MOST-RILEY-FEEDBACK": "silence_short",
+                    "EXTRA-JAMIE-CORRECT": false,
+                    "EXTRA-JAMIE-FEEDBACK": "silence_short",
+                    "EXTRA-RILEY-CORRECT": true,
+                    "EXTRA-RILEY-FEEDBACK": "Correct_answer_feedback",
+                    "AUDIO-MOST-FIX": "Most_votes_correction_full",
+                    "AUDIO-EXTRA-FIX": "Extra_votes_correction_full",
+                    "HL-MOST-FIX": [
+                        {
+                            "range": [
+                                15.41,
+                                16.16
+                            ],
+                            "imageId": "jamie"
+                        },
+                        {
+                            "range": [
+                                16.21,
+                                17.52
+                            ],
+                            "imageId": "riley"
+                        }
+                    ],
+                    "HL-EXTRA-FIX": [
+                        {
+                            "range": [
+                                15.56,
+                                16.31
+                            ],
+                            "imageId": "jamie"
+                        },
+                        {
+                            "range": [
+                                16.36,
+                                17.67
+                            ],
+                            "imageId": "riley"
+                        }
+                    ]
                 },
                 {
                     "VERSION": "jamie-cheats",
-                    "BOY-S15-ELECTION": "s15_election_rev.png",
                     "BOY-MC-VOTES": "mc_votes_rev.png",
                     "BOY-Q-PRESIDENT": "q_president_rev.png",
                     "BOY-Q-LIKE": "q_like_rev.png",
                     "BOY-MC-END": "mc_end_rev.png",
                     "BOY-Q-TOY": "q_toy_rev.png",
-                    "GIRL-S15-ELECTION": "girl_s15_election_rev.png",
+                    "BOY-S15-LEFT": "s15_election_rev_left.png",
+                    "BOY-S15-RIGHT": "s15_election_rev_right.png",
                     "GIRL-MC-VOTES": "girl_mc_votes_rev.png",
                     "GIRL-Q-PRESIDENT": "girl_q_president_rev.png",
                     "GIRL-Q-LIKE": "girl_q_like_rev.png",
                     "GIRL-MC-END": "girl_mc_end_rev.png",
                     "GIRL-Q-TOY": "girl_q_toy_rev.png",
+                    "GIRL-S15-LEFT": "girl_s15_election_rev_left.png",
+                    "GIRL-S15-RIGHT": "girl_s15_election_rev_right.png",
                     "AUDIO-RESULTS": "Results_12_rev",
-                    "MOST-VOTES-JAMIE-CORRECT": false,
-                    "MOST-VOTES-RILEY-CORRECT": true,
-                    "EXTRA-VOTES-JAMIE-CORRECT": true,
-                    "EXTRA-VOTES-RILEY-CORRECT": false,
-                    "MOST-VOTES-JAMIE-FEEDBACK": "Most_votes_correction_rev",
-                    "MOST-VOTES-RILEY-FEEDBACK": "Correct_answer_feedback",
-                    "EXTRA-VOTES-JAMIE-FEEDBACK": "Correct_answer_feedback",
-                    "EXTRA-VOTES-RILEY-FEEDBACK": "Extra_votes_correction_rev"
+                    "S15-LEFT-DELAY": 14500,
+                    "S15-RIGHT-DELAY": 0,
+                    "MOST-JAMIE-CORRECT": false,
+                    "MOST-JAMIE-FEEDBACK": "silence_short",
+                    "MOST-RILEY-CORRECT": true,
+                    "MOST-RILEY-FEEDBACK": "Correct_answer_feedback",
+                    "EXTRA-JAMIE-CORRECT": true,
+                    "EXTRA-JAMIE-FEEDBACK": "Correct_answer_feedback",
+                    "EXTRA-RILEY-CORRECT": false,
+                    "EXTRA-RILEY-FEEDBACK": "silence_short",
+                    "AUDIO-MOST-FIX": "Most_votes_correction_rev_full",
+                    "AUDIO-EXTRA-FIX": "Extra_votes_correction_rev_full",
+                    "HL-MOST-FIX": [
+                        {
+                            "range": [
+                                16.09,
+                                16.84
+                            ],
+                            "imageId": "jamie"
+                        },
+                        {
+                            "range": [
+                                16.89,
+                                18.2
+                            ],
+                            "imageId": "riley"
+                        }
+                    ],
+                    "HL-EXTRA-FIX": [
+                        {
+                            "range": [
+                                17.52,
+                                18.27
+                            ],
+                            "imageId": "jamie"
+                        },
+                        {
+                            "range": [
+                                18.32,
+                                19.63
+                            ],
+                            "imageId": "riley"
+                        }
+                    ]
                 }
             ],
             "commonFrameProperties": {
