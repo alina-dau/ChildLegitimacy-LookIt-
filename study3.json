@@ -550,15 +550,15 @@
                     "highlights": [
                         {
                             "range": [
-                                8.67,
-                                9.42
+                                9.76,
+                                11.19
                             ],
                             "imageId": "jamie"
                         },
                         {
                             "range": [
-                                9.47,
-                                10.78
+                                13.0,
+                                14.57
                             ],
                             "imageId": "riley"
                         }
@@ -675,15 +675,15 @@
                     "highlights": [
                         {
                             "range": [
-                                6.13,
-                                6.88
+                                7.22,
+                                8.65
                             ],
                             "imageId": "jamie"
                         },
                         {
                             "range": [
-                                6.93,
-                                8.24
+                                10.46,
+                                12.03
                             ],
                             "imageId": "riley"
                         }
@@ -1046,15 +1046,15 @@
                     "highlights": [
                         {
                             "range": [
-                                8.67,
-                                9.42
+                                9.76,
+                                11.19
                             ],
                             "imageId": "jamie"
                         },
                         {
                             "range": [
-                                9.47,
-                                10.78
+                                13.0,
+                                14.57
                             ],
                             "imageId": "riley"
                         }
@@ -1095,15 +1095,15 @@
                     "highlights": [
                         {
                             "range": [
-                                6.13,
-                                6.88
+                                7.22,
+                                8.65
                             ],
                             "imageId": "jamie"
                         },
                         {
                             "range": [
-                                6.93,
-                                8.24
+                                10.46,
+                                12.03
                             ],
                             "imageId": "riley"
                         }
@@ -1511,15 +1511,15 @@
                     "highlights": [
                         {
                             "range": [
-                                8.67,
-                                9.42
+                                9.76,
+                                11.19
                             ],
                             "imageId": "jamie"
                         },
                         {
                             "range": [
-                                9.47,
-                                10.78
+                                13.0,
+                                14.57
                             ],
                             "imageId": "riley"
                         }
@@ -1636,15 +1636,15 @@
                     "highlights": [
                         {
                             "range": [
-                                6.13,
-                                6.88
+                                7.22,
+                                8.65
                             ],
                             "imageId": "jamie"
                         },
                         {
                             "range": [
-                                6.93,
-                                8.24
+                                10.46,
+                                12.03
                             ],
                             "imageId": "riley"
                         }
@@ -2007,15 +2007,15 @@
                     "highlights": [
                         {
                             "range": [
-                                8.67,
-                                9.42
+                                9.76,
+                                11.19
                             ],
                             "imageId": "jamie"
                         },
                         {
                             "range": [
-                                9.47,
-                                10.78
+                                13.0,
+                                14.57
                             ],
                             "imageId": "riley"
                         }
@@ -2056,15 +2056,15 @@
                     "highlights": [
                         {
                             "range": [
-                                6.13,
-                                6.88
+                                7.22,
+                                8.65
                             ],
                             "imageId": "jamie"
                         },
                         {
                             "range": [
-                                6.93,
-                                8.24
+                                10.46,
+                                12.03
                             ],
                             "imageId": "riley"
                         }
@@ -2119,15 +2119,15 @@
                     "HL-MOST-FIX": [
                         {
                             "range": [
-                                15.41,
-                                16.16
+                                16.5,
+                                17.93
                             ],
                             "imageId": "jamie"
                         },
                         {
                             "range": [
-                                16.21,
-                                17.52
+                                19.74,
+                                21.31
                             ],
                             "imageId": "riley"
                         }
@@ -2135,15 +2135,15 @@
                     "HL-EXTRA-FIX": [
                         {
                             "range": [
-                                15.56,
-                                16.31
+                                16.65,
+                                18.08
                             ],
                             "imageId": "jamie"
                         },
                         {
                             "range": [
-                                16.36,
-                                17.67
+                                19.89,
+                                21.46
                             ],
                             "imageId": "riley"
                         }
@@ -2181,15 +2181,15 @@
                     "HL-MOST-FIX": [
                         {
                             "range": [
-                                16.09,
-                                16.84
+                                17.18,
+                                18.61
                             ],
                             "imageId": "jamie"
                         },
                         {
                             "range": [
-                                16.89,
-                                18.2
+                                20.42,
+                                22.0
                             ],
                             "imageId": "riley"
                         }
@@ -2197,15 +2197,15 @@
                     "HL-EXTRA-FIX": [
                         {
                             "range": [
-                                17.52,
-                                18.27
+                                18.61,
+                                20.04
                             ],
                             "imageId": "jamie"
                         },
                         {
                             "range": [
-                                18.32,
-                                19.63
+                                21.85,
+                                23.43
                             ],
                             "imageId": "riley"
                         }
